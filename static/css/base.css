@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #111;
+    color: #fff;
+    width: 100svw;
+    height: 100svh;
+}
+.box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo {
+    width: 400px;
+    height: 500px;
+    background: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.headTodo {
+    width: 100%;
+    height: 70px;
+    background: #dadada;
+    color: #009fff;
+    font-size: 2rem;
+    font-weight: 900;
+    text-shadow: 1px 1px 5px grey;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.container {
+    width: 90%;
+    height: 80%;
+    margin-inline: auto;
+    box-shadow: inset 1px 1px 5px grey;
+    overflow: hidden;
+}
+.item {
+    width: 100%;
+    height: 60px;
+    box-shadow: 1px 1px 3px #111;
+    display: flex;
+}
+.item[done="False"] {
+    border-left: 4px solid red;
+}
+.item[done="True"] {
+    border-left: 4px solid greenyellow;
+}
+.fp {
+    width: 70%;
+    height: 100%;
+    font-weight: 100;
+    color: #111;
+    text-wrap: wrap;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-transform: capitalize;
+}
+.sp {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5;
+    & button {
+        border-radius: 5px;
+        padding: 7px;
+        width: 40px;
+        height: 40px;
+        border: none;
+        outline: none;
+        background: #ffffff09;
+        font-size: 1.5rem;
+        color: red;
+        box-shadow: 1px 1px 3px #c0c0c0;
+        transition: 0.2s linear;
+        &:active {
+            scale: 0.9;
+        }
+    }
+    & button[name="tick"] {
+        box-shadow:
+            inset 0px 0px 5px 1px greenyellow,
+            1px 1px 2px grey;
+    }
+    & button[name="del"] {
+        box-shadow:
+            inset 0px 0px 5px 1px red,
+            1px 1px 2px grey;
+    }
+}
+input[type="button"] {
+    width: 50px;
+    height: 50px;
+    background: #009fff;
+    font-weight: 900;
+    text-shadow: 1px 1px 5px grey;
+    border: none;
+    outline: none;
+    color: #fff;
+    box-shadow: 1px 1px 3px grey;
+    position: absolute;
+    right: 10px;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    &:active {
+        scale: 0.8;
+    }
+}
